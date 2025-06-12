@@ -9,4 +9,4 @@ const userSchema = new mongoose.Schema({
   otp_verified: { type: Boolean, default: false },
 });
 
-module.exports = mongoose.model("User", userSchema);
+export default mongoose.models.User || mongoose.model("User", userSchema);

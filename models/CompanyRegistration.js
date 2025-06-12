@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+import User from "./User";
 const CompanyRegistrationSchema = new mongoose.Schema({
   userId: {
     type: mongoose.Schema.Types.ObjectId,
@@ -80,7 +80,5 @@ CompanyRegistrationSchema.pre("save", function (next) {
   next();
 });
 
-module.exports = mongoose.model(
-  "CompanyRegistration",
-  CompanyRegistrationSchema
-);
+export default mongoose.models.CompanyRegistration ||
+  mongoose.model("CompanyRegistration", CompanyRegistrationSchema);
