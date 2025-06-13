@@ -6,7 +6,7 @@ import fs from "fs";
 import connectDB from "@/lib/mongodb";
 import CompanyRegistration from "@/models/CompanyRegistration";
 import User from "@/models/User";
-
+// export things
 export const config = {
   api: {
     bodyParser: false,
